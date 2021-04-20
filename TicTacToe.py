@@ -44,4 +44,3 @@ def sieg_check(spielfeld, markierung):
             (spielfeld[7] == markierung and spielfeld[5] == markierung and spielfeld [3] == markierung))   # diagonal ul nach or
 
 
-print("GitHub Test!")
