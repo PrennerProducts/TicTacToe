@@ -1,2 +1,3 @@
 # TicTacToe
-Wiederholung und Übung TicTacToe mit AI
+
+<b>Wiederholung und Übung TicTacToe mit AI</b>
