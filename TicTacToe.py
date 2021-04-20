@@ -1,5 +1,9 @@
 from IPython.display import clear_output
 
+
+
+
+
 def spielfeld_anzeigen(spielfeld):
    clear_output()
 
@@ -12,7 +16,7 @@ def spielfeld_anzeigen(spielfeld):
   
 
 spielfeld = ["X"] *10
-spielfeld_anzeigen(spielfeld)
+#spielfeld_anzeigen(spielfeld)
 
 
 def spieler_eingabe():
@@ -25,7 +29,7 @@ def spieler_eingabe():
     else:
         return("O", "X")
     
-spieler_eingabe()
+#spieler_eingabe()
 
 
 def markierung_setzen(speilfeld, markierung, position):
@@ -44,3 +48,12 @@ def sieg_check(spielfeld, markierung):
             (spielfeld[7] == markierung and spielfeld[5] == markierung and spielfeld [3] == markierung))   # diagonal ul nach or
 
 
+
+import random
+def beginner():
+    if random.randint(0,1) == 0:
+        return "Spieler 2"
+    else:
+        return "Spieler 1"    
+
+beginner()
