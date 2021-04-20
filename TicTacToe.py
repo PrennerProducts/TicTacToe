@@ -42,3 +42,6 @@ def sieg_check(spielfeld, markierung):
             (spielfeld[3] == markierung and spielfeld[6] == markierung and spielfeld [9] == markierung) or # rechts runter
             (spielfeld[1] == markierung and spielfeld[5] == markierung and spielfeld [9] == markierung) or # diagonal ol nach ur
             (spielfeld[7] == markierung and spielfeld[5] == markierung and spielfeld [3] == markierung))   # diagonal ul nach or
+
+
+print("GitHub Test!")
