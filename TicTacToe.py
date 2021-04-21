@@ -4,7 +4,7 @@ def spielfeld_anzeigen(spielfeld):
  
     clear_output()
 
-    print(' ' + spielfeld[7] + ' | ' + spielfeld[8] + ' | ' + spielfeld[9])
+    print(' ' + spielfeld[1] + ' | ' + spielfeld[2] + ' | ' + spielfeld[3])
  
     print('-----------')
 
@@ -12,7 +12,7 @@ def spielfeld_anzeigen(spielfeld):
 
     print('-----------')
 
-    print(' ' + spielfeld[1] + ' | ' + spielfeld[2] + ' | ' + spielfeld[3])
+    print(' ' + spielfeld[7] + ' | ' + spielfeld[8] + ' | ' + spielfeld[9])
 
  
  
@@ -24,19 +24,19 @@ def spielfeld_anzeigen(spielfeld):
 
 
 def spieler_eingabe():
-    markierung = ""
-    while not (markierung== "X" or markierung == "O"):
-        markierung = input("Spieler 1: Willst du X oder O sein? ") .upper()
+    markierung = " "
+    while not (markierung == "X" or markierung == "O"):
+        markierung = input("Spieler 1: Willst du X oder O sein? ").upper()
     
-    if markierung == "x" :
-        return ("X", "O")
+    if markierung == "X":
+        return("X","O")
     else:
-        return("O", "X")
+        return("O","X")
     
 #spieler_eingabe()
 
 
-def markierung_setzen(speilfeld, markierung, position):
+def markierung_setzen(spielfeld, markierung, position):
     spielfeld[position] = markierung
 
 
@@ -50,6 +50,7 @@ def sieg_check(spielfeld, markierung):
             (spielfeld[3] == markierung and spielfeld[6] == markierung and spielfeld [9] == markierung) or # rechts runter
             (spielfeld[1] == markierung and spielfeld[5] == markierung and spielfeld [9] == markierung) or # diagonal ol nach ur
             (spielfeld[7] == markierung and spielfeld[5] == markierung and spielfeld [3] == markierung))   # diagonal ul nach or
+        
             
 
 
@@ -130,3 +131,5 @@ while True:
 
     if not neues_spiel():
         break
+
+print("GitHubTest")
