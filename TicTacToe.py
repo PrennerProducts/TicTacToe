@@ -43,14 +43,14 @@ def markierung_setzen(spielfeld, markierung, position):
 
 def sieg_check(spielfeld, markierung):
     sieg = ((spielfeld[1] == markierung and spielfeld[2] == markierung and spielfeld [3] == markierung) or  # oben
-            (spielfeld[4] == markierung and spielfeld[5] == markierung and spielfeld [6] == markierung) or # mitte
-            (spielfeld[7] == markierung and spielfeld[8] == markierung and spielfeld [9] == markierung) or # unten
-            (spielfeld[1] == markierung and spielfeld[4] == markierung and spielfeld [7] == markierung) or # links runter
-            (spielfeld[2] == markierung and spielfeld[5] == markierung and spielfeld [8] == markierung) or # mitte runter
-            (spielfeld[3] == markierung and spielfeld[6] == markierung and spielfeld [9] == markierung) or # rechts runter
-            (spielfeld[1] == markierung and spielfeld[5] == markierung and spielfeld [9] == markierung) or # diagonal ol nach ur
-            (spielfeld[7] == markierung and spielfeld[5] == markierung and spielfeld [3] == markierung))   # diagonal ul nach or
-        
+        (spielfeld[4] == markierung and spielfeld[5] == markierung and spielfeld [6] == markierung) or # mitte
+        (spielfeld[7] == markierung and spielfeld[8] == markierung and spielfeld [9] == markierung) or # unten
+        (spielfeld[1] == markierung and spielfeld[4] == markierung and spielfeld [7] == markierung) or # links runter
+        (spielfeld[2] == markierung and spielfeld[5] == markierung and spielfeld [8] == markierung) or # mitte runter
+        (spielfeld[3] == markierung and spielfeld[6] == markierung and spielfeld [9] == markierung) or # rechts runter
+        (spielfeld[1] == markierung and spielfeld[5] == markierung and spielfeld [9] == markierung) or # diagonal ol nach ur
+        (spielfeld[7] == markierung and spielfeld[5] == markierung and spielfeld [3] == markierung))   # diagonal ul nach or        
+    return sieg    
             
 
 
@@ -106,6 +106,7 @@ while True:
             if sieg_check(dasFeld, spieler1_markierung):
                 spielfeld_anzeigen(dasFeld)
                 print("Gratuliere du hast gewonnen!")
+                break
             else:
                 if spielfeld_voll(dasFeld):
                     spielfeld_anzeigen(dasFeld)
@@ -121,6 +122,7 @@ while True:
             if sieg_check(dasFeld, spieler2_markierung):
                 spielfeld_anzeigen(dasFeld)
                 print("Gratuliere du hast gewonnen!")
+                break
             else:
                 if spielfeld_voll(dasFeld):
                     spielfeld_anzeigen(dasFeld)
@@ -132,8 +134,4 @@ while True:
     if not neues_spiel():
         break
 
-print("GitHubTest")
-print("GitHubTest")
-print("GitHubTest")
-print("GitHubTest")
-print("GitHubTest")
+
